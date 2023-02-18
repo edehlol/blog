@@ -14,7 +14,13 @@ export default function RootLayout({
       <head />
       <body className="px-4">
         <nav className="py-4">My Blog</nav>
-        <div>{children}</div>
+        <div
+          className="
+        max-w-2xl mx-auto
+        "
+        >
+          {children}
+        </div>
       </body>
     </html>
   );
