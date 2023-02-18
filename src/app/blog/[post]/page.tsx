@@ -1,5 +1,5 @@
 import { CustomMDX } from "@/components/CustomMDX";
-import { getPostBySlug } from "@/lib/api";
+import { getAllPosts, getPostBySlug } from "@/lib/api";
 import { Metadata } from "next";
 
 export async function generateMetadata({
@@ -13,6 +13,14 @@ export async function generateMetadata({
   return { title: post.title, description: post.title };
 }
 
+export async function generateStaticParams() {
+  const posts = getAllPosts(["slug"]);
+
+  return posts.map((post) => ({
+    post: post.slug,
+  }));
+}
+
 export default function Post({
   params,
 }: {
@@ -20,13 +28,7 @@ export default function Post({
     post: string;
   };
 }) {
-  console.log(params);
   const post = getPostBySlug(params.post, ["title", "content"]);
 
-  console.log(post);
-  return (
-    <main>
-      <CustomMDX source={post.content} />
-    </main>
-  );
+  return <main>{<CustomMDX source={post.content} />}</main>;
 }
