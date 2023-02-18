@@ -49,7 +49,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     a: ({ children, href }) => (
       <Link
         className="
-      text-blue-500 hover:text-blue-600"
+      text-indigo-500 hover:text-violet-700"
         href={href as string}
         target="_blank"
       >

@@ -1,6 +1,7 @@
 import { CustomMDX } from "@/components/CustomMDX";
 import { getAllPosts, getPostBySlug } from "@/lib/api";
 import { Metadata } from "next";
+import dayjs from "dayjs";
 
 export async function generateMetadata({
   params,
@@ -28,7 +29,7 @@ export default function Post({
     post: string;
   };
 }) {
-  const post = getPostBySlug(params.post, ["title", "content"]);
+  const post = getPostBySlug(params.post, ["title", "content", "date"]);
 
   return <main>{<CustomMDX source={post.content} />}</main>;
 }
