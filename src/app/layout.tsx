@@ -1,3 +1,4 @@
+import Link from "next/link";
 import "./globals.css";
 
 export default function RootLayout({
@@ -13,7 +14,17 @@ export default function RootLayout({
       */}
       <head />
       <body className="px-4">
-        <nav className="py-4">My Blog</nav>
+        <nav className="py-4">
+          {/* header main link */}
+          <Link
+            href="/"
+            className="
+            text-xl text-gray-900
+          "
+          >
+            My Blog
+          </Link>
+        </nav>
         <div
           className="
         max-w-2xl mx-auto
