@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { AnalyticsWrapper } from "./components/analytics";
 import "./globals.css";
 
 const GithubIcon = () => (
@@ -79,6 +80,7 @@ export default function RootLayout({
             </div>
           </div>
         </footer>
+        <AnalyticsWrapper />
       </body>
     </html>
   );

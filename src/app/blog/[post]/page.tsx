@@ -1,4 +1,4 @@
-import { CustomMDX } from "@/components/CustomMDX";
+import { CustomMDX } from "@/app/components/CustomMDX";
 import { getAllPosts, getPostBySlug } from "@/lib/api";
 import { Metadata } from "next";
 import dayjs from "dayjs";
