@@ -20,7 +20,7 @@ export default function Home() {
         Hey there 👋, I'm Edy. I'm a software engineer and I love to build
         things.
       </p>
-      <Image src={HomeImage} alt="" className="mb-4" />
+      <Image src={HomeImage} alt="" className="mb-4" priority />
       <p className="text-lg mb-4">
         Not sure how you got here, but I'm glad you did. I'm currently working
         on a few projects, but I'm not sure if I can share them yet. I'll update
